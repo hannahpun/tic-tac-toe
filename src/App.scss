@@ -1,0 +1,104 @@
+$size: 120px;
+$primary: #FF6D70;
+$secondary: #fff;
+body {
+  font: 300 14px 'Roboto', sans-serif;
+  margin: 20px;
+  background-color: #2d3436;
+  color: white;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  font-size: 18px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  span{
+    padding-right: 10px;
+  }
+}
+
+.square {
+  background: transparent;
+  border-width: 0px;
+  border-left: 8px solid $secondary;
+  border-bottom: 8px solid $secondary;
+  color: $primary;
+  float: left;
+  font-size: 60px;
+  // line-height: $size;
+  height: $size;
+  // margin-right: -1px;
+  // margin-top: -1px;
+  padding: 0;
+  // text-align: center;
+  width: $size;
+  &:first-of-type{
+    border-left-width: 0;
+  }
+}
+.board-row:last-of-type .square{
+  border-bottom-width: 0;
+}
+
+.square:focus {
+  outline: none;
+}
+
+
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+}
+.game-board {
+  text-align: center;
+}
+
+.board{
+  margin: 30px 0;
+}
+
+.title{
+  font-size: 42px;
+  font-weight: 300;
+  color: $primary;
+  margin: 0px;
+  margin-top: 10px;
+}
+
+.game-result {
+  text-align: center;
+  font-size: 30px;
+  
+}
+
+.btn{
+  font-size: 22px;
+  background-color: transparent;
+  border: 2px solid $primary;
+  padding: 10px 20px;
+  width: 100%;
+  color: $primary;
+  text-transform: uppercase;
+  cursor: pointer;
+  &:hover{
+    background-color: $primary;
+    color: $secondary;
+  }
+}
